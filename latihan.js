@@ -52,6 +52,34 @@ function multidimensi (input) {
     13 => [2, 3, 5, 7, 11, 13]
 */
 
+function palindrome(kata) {
+    // you can only write your code here!
+    if (kata === undefined || kata === '') {
+        return false;
+    }
+    kata = kata.toString();
+    
+    var result;
+    var a = 0;
+    var b = kata.length - 1;
+
+
+    while ((kata[a] === kata[b]) && (a !== b)) {
+        a++;
+        b--;
+    }
+    if (a === b) {
+        result = true;
+    } else {
+        result = false;
+    }
+    return result;
+}
+
+//console.log(palindrome('katak'));
+
+
+
 //mengecek bilangan prima
 function cekPrima (x) {
     var c = x;
@@ -71,6 +99,7 @@ function cekPrima (x) {
     return result;
 }
 
+
 //membuat deret bilangan prima
 function deretPrima (x) {
     deret = [];
@@ -82,4 +111,4 @@ function deretPrima (x) {
     return deret;
 }
 
-console.log(deretPrima(13));
+//console.log(deretPrima(13));

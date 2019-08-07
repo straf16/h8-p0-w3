@@ -3,18 +3,16 @@ function palindrome(kata) {
     if (kata === undefined || kata === '') {
         return false;
     }
-    kata = kata.toString();
     
+    var cekKata = kata.toString();
     var result;
-    var a = 0;
-    var b = kata.length - 1;
+    var balik = '';
 
-
-    while ((kata[a] === kata[b]) && (a !== b)) {
-        a++;
-        b--;
+    for (var i = cekKata.length - 1; i >= 0; i--) {
+        balik += cekKata[i];
     }
-    if (a === b) {
+
+    if (kata == balik) {
         result = true;
     } else {
         result = false;

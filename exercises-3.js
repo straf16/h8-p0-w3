@@ -17,16 +17,15 @@ function dataHandling (input) {
                     console.log('Nama Lengkap: ' + input[i][j]);        
                     break;
                 case 2:
-                    console.log('TTL: ' + input[i][j]);        
+                    console.log('TTL: ' + input[i][j] + ' ' +input[i][j+1]);
                     break;
-                case 3:
-                    console.log('Hobi: ' + input[i][j]);        
+                case 4:
+                    console.log('Hobi: ' + input[i][j] + '\n');        
                     break;
                 default:
                     break;
             }
         }
-        console.log('\n');
     }
 }
 
