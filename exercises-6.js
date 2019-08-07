@@ -1,6 +1,27 @@
 function angkaPalindrome(num) {
     // you can only write your code here!
-    
+    if (num === undefined || num === '') {
+        return NaN;
+    }
+
+    var balik = '';
+    var cek;
+
+    while (true) {
+        num++;
+
+        cek = String(num);
+        for (var i = cek.length - 1; i >= 0; i--) {
+            balik += cek[i];
+        }
+        
+        if (balik == num) {
+            return num;
+            break;
+        }
+        balik = '';
+        
+    }
 }
 
 // TEST CASES
