@@ -3,7 +3,6 @@ function tentukanDeretGeometri(arr) {
     var rasio = arr[1] / arr[0];
 
     for (var i = 1; i < arr.length; i++) {
-        console.log(arr[i] / arr[i-1]);
         if (arr[i] / arr[i-1] != rasio) {
             return false;
         }
