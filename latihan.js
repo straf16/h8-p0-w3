@@ -16,6 +16,17 @@ function bilangan (input) {
 
 //console.log(bilangan(5));
 
+function multidimensi (input) {
+    var num = input;
+
+    for (var i = 0; i < num.length; i++) {
+        num[i] = num[i].split('');
+    }
+    return num;
+}
+
+// console.log(multidimensi(bilangan(5)));
+
 function deret (x) {
     var a = 1;
     var angka = [];
@@ -31,18 +42,6 @@ function deret (x) {
 //console.log(deret(15));
 
 
-
-function multidimensi (input) {
-    var num = input;
-
-    for (var i = 0; i < num.length; i++) {
-        num[i] = num[i].split('');
-    }
-    return num;
-}
-
-//console.log(multidimensi(bilangan(5)));
-
 /* 
     deret prima (homework ka icha)
 
@@ -51,34 +50,6 @@ function multidimensi (input) {
     9 => [2, 3, 5, 7]
     13 => [2, 3, 5, 7, 11, 13]
 */
-
-function palindrome(kata) {
-    // you can only write your code here!
-    if (kata === undefined || kata === '') {
-        return false;
-    }
-    kata = kata.toString();
-    
-    var result;
-    var a = 0;
-    var b = kata.length - 1;
-
-
-    while ((kata[a] === kata[b]) && (a !== b)) {
-        a++;
-        b--;
-    }
-    if (a === b) {
-        result = true;
-    } else {
-        result = false;
-    }
-    return result;
-}
-
-//console.log(palindrome('katak'));
-
-
 
 //mengecek bilangan prima
 function cekPrima (x) {
@@ -112,3 +83,31 @@ function deretPrima (x) {
 }
 
 //console.log(deretPrima(13));
+
+
+
+function palindrome(kata) {
+    // you can only write your code here!
+    if (kata === undefined || kata === '') {
+        return false;
+    }
+    kata = kata.toString();
+    
+    var result;
+    var a = 0;
+    var b = kata.length - 1;
+
+
+    while ((kata[a] === kata[b]) && (a !== b)) {
+        a++;
+        b--;
+    }
+    if (a === b) {
+        result = true;
+    } else {
+        result = false;
+    }
+    return result;
+}
+
+//console.log(palindrome('katak'));
